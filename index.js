@@ -8,8 +8,6 @@ const defaultOptions = {
     unitPrecision: 2 // (Number) 单位转换后保留的精度
 };
 
-const pxRegex = getUnitRegexp(opts.unitToConvert);
-
 const getUnitRegexp = (unit) => {
     return new RegExp(
         "\"[^\"]+\"|'[^']+'|url\\([^\\)]+\\)|(\\d*\\.?\\d+)" + unit,
@@ -17,11 +15,15 @@ const getUnitRegexp = (unit) => {
     );
 };
 
-const px2vw = (source, opts) => {
-    return source.replace(pxRegex, createPxReplace(opts));
+const pxRegex = getUnitRegexp(opts.unitToConvert);
+
+const toFixed = (number, precision) => {
+    var multiplier = Math.pow(10, precision + 1),
+        wholeNumber = Math.floor(number * multiplier);
+    return (Math.round(wholeNumber / 10) * 10) / multiplier;
 };
 
-function createPxReplace(opts) {
+const createPxReplace = (opts) => {
     return function (m, $1) {
         if (!$1) return m;
         var pixels = parseFloat($1);
@@ -34,10 +36,8 @@ function createPxReplace(opts) {
     };
 }
 
-const toFixed = (number, precision) => {
-    var multiplier = Math.pow(10, precision + 1),
-        wholeNumber = Math.floor(number * multiplier);
-    return (Math.round(wholeNumber / 10) * 10) / multiplier;
+const px2vw = (source, opts) => {
+    return source.replace(pxRegex, createPxReplace(opts));
 };
 
 const px2vwLoader = (source) => {
