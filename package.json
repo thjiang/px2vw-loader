@@ -1,0 +1,22 @@
+{
+  "name": "@cru/px2vw-loader",
+  "version": "1.0.1",
+  "description": "A Webpack Loader for Convert Px to Vw",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "loader-utils": ">=2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thjiang/px2vw-loader.git"
+  },
+  "author": "browserify@qq.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thjiang/px2vw-loader/issues"
+  },
+  "homepage": "https://github.com/thjiang/px2vw-loader#readme"
+}
