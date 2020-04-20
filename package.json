@@ -2,7 +2,7 @@
   "name": "@cru/px2vw-loader",
   "version": "1.0.2",
   "description": "A Webpack Loader for Convert Px to Vw",
-  "Keywords": [
+  "keywords": [
     "css", "px", "viewport", "vw", "vh", "webpack", "loader"
   ],
   "main": "index.js",
