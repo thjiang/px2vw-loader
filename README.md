@@ -110,22 +110,22 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: "style-loader",
+                        loader: "style-loader"
                     },
                     {
-                        loader: "css-loader",
+                        loader: "css-loader"
                     },
                     {
                         loader: "px2vw-loader",
                         options: {
                             viewportWidth: 1440,
-                            unitPrecision: 4,
-                        },
-                    },
-                ],
-            },
-        ],
-    },
+                            unitPrecision: 4
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 };
 ```
 
