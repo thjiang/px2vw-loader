@@ -63,9 +63,6 @@
         "rollup-plugin-typescript2": "^0.31.2",
         "typescript": "^4.6.3"
     },
-    "peerDependencies": {
-        "react": "^18"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/thjiang/px2vw-loader.git"
