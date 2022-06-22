@@ -1,6 +1,6 @@
 {
     "name": "@cru/px2vw-loader",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A Webpack Loader for Convert Px to Vw",
     "Keywords": [
         "css",
@@ -27,6 +27,8 @@
     "scripts": {
         "build": "rollup --config",
         "debug": "node src/debugger.js",
+        "eslint:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+		"eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src --color",
         "publish": "npm publish"
     },
     "dependencies": {
@@ -37,6 +39,8 @@
     "devDependencies": {
         "@babel/core": "^7.17.9",
         "@babel/preset-env": "^7.16.11",
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
         "@rollup/plugin-babel": "^5.3.1",
         "@typescript-eslint/eslint-plugin": "^5.20.0",
         "@typescript-eslint/parser": "^5.20.0",
@@ -46,6 +50,8 @@
         "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-react": "^7.29.4",
         "eslint-plugin-react-hooks": "^4.4.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.2",
         "loader-runner": "^4.3.0",
         "rollup": "^2.70.2",
         "rollup-plugin-babel": "^4.4.0",
