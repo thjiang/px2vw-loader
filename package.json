@@ -1,25 +1,79 @@
 {
-  "name": "@cru/px2vw-loader",
-  "version": "1.0.4",
-  "description": "A Webpack Loader for Convert Px to Vw",
-  "keywords": [
-    "css", "px", "viewport", "vw", "vh", "webpack", "loader"
-  ],
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "loader-utils": ">=2.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thjiang/px2vw-loader.git"
-  },
-  "author": "browserify@qq.com",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/thjiang/px2vw-loader/issues"
-  },
-  "homepage": "https://github.com/thjiang/px2vw-loader#readme"
+    "name": "@cru/px2vw-loader",
+    "version": "1.0.4",
+    "description": "A Webpack Loader for Convert Px to Vw",
+    "Keywords": [
+        "css",
+        "px",
+        "viewport",
+        "vw",
+        "vh",
+        "webpack",
+        "loader"
+    ],
+    "main": "lib/index.js",
+    "unpkg": "dist/index.js",
+    "module": "es/index.js",
+    "files": [
+        "dist",
+        "lib",
+        "es",
+        "src",
+        "types"
+    ],
+    "directories": {
+        "lib": "lib"
+    },
+    "scripts": {
+        "build": "rollup --config",
+        "debug": "node src/debugger.js",
+        "eslint:lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
+        "eslint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx src --color",
+        "test": "jest --watchAll",
+        "publish": "npm publish"
+    },
+    "dependencies": {
+        "@types/loader-utils": "^1.1.6",
+        "core-js": "^3.22.1",
+        "loader-utils": "^1.4.0"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.17.9",
+        "@babel/preset-env": "^7.16.11",
+        "@commitlint/cli": "^17.0.2",
+        "@commitlint/config-conventional": "^17.0.2",
+        "@rollup/plugin-babel": "^5.3.1",
+        "@typescript-eslint/eslint-plugin": "^5.20.0",
+        "@typescript-eslint/parser": "^5.20.0",
+        "babel-jest": "^28.1.1",
+        "eslint": "^8.14.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-react": "^7.29.4",
+        "eslint-plugin-react-hooks": "^4.4.0",
+        "husky": "^8.0.1",
+        "jest": "^28.1.1",
+        "lint-staged": "^13.0.2",
+        "loader-runner": "^4.3.0",
+        "rollup": "^2.70.2",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-node-resolve": "^5.2.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.31.2",
+        "typescript": "^4.6.3"
+    },
+    "peerDependencies": {
+        "react": "^18"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/thjiang/px2vw-loader.git"
+    },
+    "author": "browserify@qq.com",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/thjiang/px2vw-loader/issues"
+    },
+    "homepage": "https://github.com/thjiang/px2vw-loader#readme"
 }
