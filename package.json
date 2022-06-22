@@ -1,6 +1,6 @@
 {
     "name": "@cru/px2vw-loader",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "A Webpack Loader for Convert Px to Vw",
     "Keywords": [
         "css",
